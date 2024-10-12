@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lean Hover Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .common{
+            height:300px;
+            width:450px;
+
+        }
+        .box{
+            
+            margin:200px auto;
+            background-image:url(./img/1.png);
+            background-size:cover;
+            box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+            /*x y b(blue kitna karna hai) s(shadow box kitna hona chahiye) c(color kaisi honi chahiye)*/
+            position:relative;
+            overflow:hidden;
+        }   
+        .overlayer{
+            background:rgba(241, 5, 5, 0.954);
+            position:absolute;
+            top:-300px;
+            right:0px;
+            transition-property: all;
+            transition-duration: 0.2s;
+            transition-timing-function:ease-out;
+        
+
+        }
+        /* desecedent select
+        p c{
+
+
+        }
+        */
+        .box:hover .overlayer {
+            top:0px;
+        }
+        .overlayer>a{
+            display:inline-block;/*for ek hi line mai lane ke liye*/
+            height:50px;
+            width:50px;
+            background:#fff;
+            color:#000;
+            border-radius:50px;
+            text-align:center;
+            line-height:50px;
+            position:absolute;
+            top:125px;
+            left:190px;
+            
+        }
+        .b{
+            left:250px !important;
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="common box">
+        <div class="common overlayer">
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+            <a class="b" href="#"><i class="fa-solid fa-magnifying-glass"></i> </a>
+        </div>
+    </div>
+</body>
+</html>
